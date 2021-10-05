@@ -48,10 +48,10 @@ function Home() {
     if (!weatherData) return {};
     return {
       cloudiness: weatherData.clouds.all,
-      currentTemp: weatherData.main.temp,
-      highTemp: weatherData.main.temp_max,
+      currentTemp: Math.round(weatherData.main.temp),
+      highTemp: Math.round(weatherData.main.temp_max),
       humidity: weatherData.main.humidity,
-      lowTemp: weatherData.main.temp_min,
+      lowTemp: Math.round(weatherData.main.temp_min),
       weatherType: weatherData.weather[0].main,
       windSpeed: weatherData.wind.speed,
     };
@@ -60,12 +60,12 @@ function Home() {
   return (
     <main className="App">
       <header>
-        <p>
+        <nav className="Navigation">
           <a href="/?city=paris">Paris</a>
-        </p>
-        <p>
           <a href="/?city=tokyo">Tokyo</a>
-        </p>
+          <a href="/?city=seattle">Seattle</a>
+          <a href="/?city=sydney">Sydney</a>
+        </nav>
       </header>
       <h1>{city}</h1>
       <WeatherCard
