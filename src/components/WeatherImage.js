@@ -14,9 +14,9 @@ function WeatherImage({ weatherType }) {
     case "Clear":
       return <FontAwesomeIcon icon={faSun} />;
     case "Rain" || "Thunderstorms":
-      return <FontAwesomeIcon icon={faSnowflake} />;
+      return <FontAwesomeIcon icon={faCloudRain} />;
     case "Snow":
-      return <FontAwesomeIcon icon={faSun} />;
+      return <FontAwesomeIcon icon={faSnowflake} />;
     default:
       return <FontAwesomeIcon icon={faCloud} />;
   }

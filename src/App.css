@@ -1,25 +1,67 @@
-.WeatherCardWrapper {
+.App {
   margin: 0 auto;
   max-width: 1160px;
   padding: 0 25px;
 }
 
-.WeatherImageWrapper {
-  align-items: center;
+.WeatherCard {
   display: flex;
+  flex-direction: row;
+}
+
+.WeatherCardImage {
+  align-items: center;
+  border-radius: 30px;
+  display: flex;
+  font-size: 24vw;
+  height: 400px;
   justify-content: center;
   padding-top: 40px;
-  font-size: 160px;
+  width: 60vw;
+}
+
+.WeatherNumbers {
+  display: flex;
+  flex-direction: column;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  padding-left: 50px;
 }
 
 .Navigation {
   display: flex;
+  font-family: "Playfair Display", serif;
   padding: 20px 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 
-.Navigaiton a {
+.Navigation a {
   color: black;
   font-size: 20px;
   font-weight: bold;
   margin-right: 20px;
+  text-decoration: none;
+}
+
+.Navigation a:hover {
+  text-decoration: underline;
+}
+
+.SelectedCity {
+  font-family: "Playfair Display", serif;
+  font-size: 130px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  padding: 0px;
+}
+
+@media (min-width: 800px) {
+  .City {
+    font-size: 100px;
+  }
+
+  .WeatherCard {
+    flex-direction: row;
+  }
 }

@@ -4,6 +4,11 @@ import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import WeatherCard from "../components/WeatherCard";
 
+<link
+  href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap"
+  rel="stylesheet"
+></link>;
+
 const API_KEY = `604feb983a13dc348e646aa872aedba5`;
 
 function useQuery() {
@@ -67,7 +72,7 @@ function Home() {
           <a href="/?city=sydney">Sydney</a>
         </nav>
       </header>
-      <h1>{city}</h1>
+      <h1 className="SelectedCity">{city}</h1>
       <WeatherCard
         cloudiness={cloudiness}
         currentTemp={currentTemp}
