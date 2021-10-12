@@ -21,7 +21,7 @@ function Home() {
 
   let query = useQuery();
 
-  const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`;
+  const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`;
 
   useEffect(() => {
     const cityValue = query.get("city");
@@ -64,24 +64,26 @@ function Home() {
 
   return (
     <main className="App">
-      <header>
-        <nav className="Navigation">
-          <a href="/?city=paris">Paris</a>
-          <a href="/?city=tokyo">Tokyo</a>
-          <a href="/?city=seattle">Seattle</a>
-          <a href="/?city=sydney">Sydney</a>
-        </nav>
-      </header>
-      <h1 className="SelectedCity">{city}</h1>
-      <WeatherCard
-        cloudiness={cloudiness}
-        currentTemp={currentTemp}
-        highTemp={highTemp}
-        humidity={humidity}
-        lowTemp={lowTemp}
-        weatherType={weatherType}
-        windSpeed={windSpeed}
-      />
+      <div className="AppSpacing">
+        <header>
+          <nav className="Navigation">
+            <a href="/?city=paris">Paris</a>
+            <a href="/?city=tokyo">Tokyo</a>
+            <a href="/?city=seattle">Seattle</a>
+            <a href="/?city=sydney">Sydney</a>
+          </nav>
+        </header>
+        <h1 className="SelectedCity">{city}</h1>
+        <WeatherCard
+          cloudiness={cloudiness}
+          currentTemp={currentTemp}
+          highTemp={highTemp}
+          humidity={humidity}
+          lowTemp={lowTemp}
+          weatherType={weatherType}
+          windSpeed={windSpeed}
+        />
+      </div>
     </main>
   );
 }

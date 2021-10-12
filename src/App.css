@@ -1,31 +1,15 @@
 .App {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(130, 216, 239),
+    rgb(211, 167, 245)
+  );
+}
+
+.AppSpacing {
   margin: 0 auto;
   max-width: 1160px;
   padding: 0 25px;
-}
-
-.WeatherCard {
-  display: flex;
-  flex-direction: row;
-}
-
-.WeatherCardImage {
-  align-items: center;
-  border-radius: 30px;
-  display: flex;
-  font-size: 24vw;
-  height: 400px;
-  justify-content: center;
-  padding-top: 40px;
-  width: 60vw;
-}
-
-.WeatherNumbers {
-  display: flex;
-  flex-direction: column;
-  font-family: "Playfair Display", serif;
-  font-size: 20px;
-  padding-left: 50px;
 }
 
 .Navigation {
@@ -50,18 +34,39 @@
 
 .SelectedCity {
   font-family: "Playfair Display", serif;
-  font-size: 130px;
+  font-size: 90px;
   margin-top: 0px;
   margin-bottom: 30px;
   padding: 0px;
 }
 
-@media (min-width: 800px) {
-  .City {
-    font-size: 100px;
-  }
+.WeatherCard {
+  display: flex;
+  flex-direction: row;
+  height: 550px;
+}
 
-  .WeatherCard {
-    flex-direction: row;
+.WeatherCardImage {
+  align-items: center;
+  border-radius: 30px;
+  display: flex;
+  font-size: 24vw;
+  height: 420px;
+  justify-content: center;
+  padding-top: 40px;
+  width: 60vw;
+}
+
+.WeatherNumbers {
+  display: flex;
+  flex-direction: column;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  padding-left: 50px;
+}
+
+@media (min-width: 800px) {
+  .SelectedCity {
+    font-size: 130px;
   }
 }
